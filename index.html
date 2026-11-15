@@ -1,19 +1,47 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-
-<title>2D Animation Studio</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StoryForge – 2D Animation Studio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0a0a0f;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      color: #e0e0ff;
+    }
+    h1 {
+      font-size: 1.4rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #a78bfa;
+      margin-bottom: 1.2rem;
+      opacity: 0.9;
+    }
+    #storyforge-canvas {
+      border-radius: 12px;
+      box-shadow: 0 0 60px rgba(139, 92, 246, 0.35), 0 0 120px rgba(139, 92, 246, 0.15);
+      max-width: 100%;
+      max-height: 85vh;
+    }
+    footer {
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      opacity: 0.4;
+      letter-spacing: 0.08em;
+    }
+  </style>
 </head>
-
 <body>
-
-<h1>Welcome to 2D Animation Studio!</h1>
-
-<p>Our animation project starts here.</p>
-
+  <h1>StoryForge Studio</h1>
+  <canvas id="storyforge-canvas" width="720" height="1280"></canvas>
+  <footer>Press Ctrl+U to export MP4 &nbsp;|&nbsp; npm run export</footer>
+  <script type="module" src="/src/main.js"></script>
 </body>
-
 </html>
