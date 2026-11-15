@@ -1,6 +1,6 @@
 {
   "name": "storyforge",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "StoryForge – Code-generated 2D Animation Studio",
   "type": "module",
   "scripts": {
@@ -8,7 +8,14 @@
     "build": "vite build",
     "preview": "vite preview",
     "export": "node scripts/export-mp4.js",
-    "test": "node scripts/export-mp4.js --test"
+    "export:ep1": "node scripts/export-mp4.js --script samples/episode1.txt --out dist/episode1.mp4",
+    "export:ep2": "node scripts/export-mp4.js --script samples/episode2.txt --out dist/episode2.mp4",
+    "export:ep3": "node scripts/export-mp4.js --script samples/episode3.txt --out dist/episode3.mp4",
+    "export:all": "npm run export:ep1 && npm run export:ep2 && npm run export:ep3",
+    "test": "node scripts/export-mp4.js --test",
+    "test:ep1": "node scripts/export-mp4.js --script samples/episode1.txt --test",
+    "test:ep2": "node scripts/export-mp4.js --script samples/episode2.txt --test",
+    "test:ep3": "node scripts/export-mp4.js --script samples/episode3.txt --test"
   },
   "dependencies": {
     "canvas": "^2.11.2",
