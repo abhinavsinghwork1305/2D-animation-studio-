@@ -14,6 +14,7 @@ if (!canvas) {
 const ctx = canvas.getContext('2d');
 
 // ── Mutable state ─────────────────────────────────────────────────────────────
+let loadedAudioFileName = null;
 let scenes = null;
 let totalFrames = SCENE.totalFrames;
 let frame = 0;
